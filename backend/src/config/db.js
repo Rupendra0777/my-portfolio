@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-import 'dotenv/config';
-dotenv.config();
+
 const connectDB = async () => {
-    await mongoose.connect(process.env.MONGO_URL)
-    // console.log("application is connected to database successfully");
+    if (!process.env.MONGO_URL) {
+        throw new Error("MONGO_URL is missing from the backend environment.");
+    }
+
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("Connected to MongoDB.");
 };
 
 export default connectDB;
