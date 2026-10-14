@@ -396,11 +396,79 @@ main {
   margin-bottom: 18px;
 }
 
+.contact-form {
+  display: grid;
+  max-width: 560px;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.contact-form label {
+  margin-top: 8px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cfd9d0;
+  border-radius: 7px;
+  color: var(--color-text);
+  background: rgb(255 255 255 / 88%);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-accent);
+  outline: 3px solid rgb(57 112 79 / 15%);
+}
+
+.contact-form button {
+  justify-self: start;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-feedback {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+}
+
+.form-feedback--success {
+  color: var(--color-accent-dark);
+}
+
+.form-feedback--error {
+  color: #a52e2e;
+}
+
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 14px;
+}
+
+.contact-social-heading {
+  margin: 32px 0 0;
+  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
 }
 
 .contact-email {
@@ -423,18 +491,33 @@ footer p {
   margin: 0;
 }
 
-footer a {
-  min-height: 44px;
-  display: inline-flex;
+.footer-socials {
+  display: flex;
   align-items: center;
-  color: var(--color-accent-dark);
-  font-weight: 600;
-  text-decoration: none;
+  gap: 8px;
 }
 
-footer a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.footer-socials a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  color: var(--color-muted);
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.footer-socials a:hover {
+  color: var(--color-accent-dark);
+  background: var(--color-soft);
+}
+
+.footer-socials svg {
+  width: 19px;
+  height: 19px;
 }
 
 @media (max-width: 640px) {

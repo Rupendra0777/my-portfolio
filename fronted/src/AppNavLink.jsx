@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 function AppNavLink() {
   return (
     <nav className="site-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="#blog">Blog</a>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/blog">Blog</Link>
     </nav>
   );
 }

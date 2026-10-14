@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function HomePage() {
   return (
     <section className="page-section hero" id="home">
@@ -11,9 +13,9 @@ function HomePage() {
         computer vision, and creating useful software.
       </p>
       <div className="hero-actions">
-        <a className="button button-primary" href="#projects">
+        <Link className="button button-primary" to="/projects">
           Explore my projects <span aria-hidden="true">↗</span>
-        </a>
+        </Link>
         <a className="button button-secondary" href="/resume.pdf" download>
           Download my résumé <span aria-hidden="true">↓</span>
         </a>
