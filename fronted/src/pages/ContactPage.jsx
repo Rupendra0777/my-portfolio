@@ -51,8 +51,10 @@ function ContactPage() {
     <section className="page-section contact-section" id="contact">
       {/* 4. Render the Toaster component at the top of your JSX structure */}
       <Toaster position="top-right" reverseOrder={false} />
-
-      <h2>Let’s work together.</h2>
+      <div className="contact-heading-group">
+        <h3 className="contact-social-heading">Let’s get connected</h3>
+        <h2>Let’s work together.</h2>
+      </div>
       <p className="section-intro">
         Have a question or want to work together? Send me an email.
       </p>
@@ -100,8 +102,8 @@ function ContactPage() {
 
         {/* REMOVED: Old feedback text paragraph block */}
       </form>
-      <h3 className="contact-social-heading">Let’s get connected</h3>
-      <div className="contact-socials" aria-label="Social profiles">
+
+      {/* <div className="contact-socials" aria-label="Social profiles">
         <a
           className="button button-secondary"
           href="https://github.com/Rupendra0777"
@@ -126,7 +128,7 @@ function ContactPage() {
         >
           YouTube <span aria-hidden="true">↗</span>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

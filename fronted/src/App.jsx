@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="page-shell">
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
@@ -21,7 +21,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© {currentYear} Your Name</p>
+        <p>© {currentYear} Rupendra Dhungana</p>
         <nav className="footer-socials" aria-label="Social media links">
           <a
             href="https://github.com/Rupendra0777"
@@ -33,6 +33,19 @@ function App() {
               <path
                 fill="currentColor"
                 d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .1.69 2.47 4.3 1.73.1-.73.39-1.23.7-1.51-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.44.11-3 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.62 1.56.23 2.71.12 3 .72.79 1.15 1.8 1.15 3.04 0 4.35-2.65 5.3-5.17 5.59.4.34.75 1.02.75 2.06v3.05c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://x.com/rups1603"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (opens in a new tab)"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.901 1.5h3.68L14.54 10.18 24 22.5h-7.406l-5.8-7.584L4.17 22.5H.486l8.6-9.83L0 1.5h7.594l5.243 6.932L18.901 1.5Zm-1.29 18.83h2.039L6.486 3.556H4.298L17.61 20.33Z"
               />
             </svg>
           </a>
@@ -55,6 +68,8 @@ function App() {
             rel="noopener noreferrer"
             aria-label="YouTube (opens in a new tab)"
           >
+
+
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -64,7 +79,7 @@ function App() {
           </a>
         </nav>
       </footer>
-    </>
+    </div>
   );
 }
 

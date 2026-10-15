@@ -17,7 +17,7 @@ function HomePage() {
           Explore my projects <span aria-hidden="true">↗</span>
         </Link>
         <a className="button button-secondary" href="/resume.pdf" download>
-          Download my résumé <span aria-hidden="true">↓</span>
+          Download my resume <span aria-hidden="true">↓</span>
         </a>
       </div>
     </section>
