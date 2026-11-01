@@ -52,8 +52,8 @@ function ContactPage() {
       {/* 4. Render the Toaster component at the top of your JSX structure */}
       <Toaster position="top-right" reverseOrder={false} />
       <div className="contact-heading-group">
-        <h3 className="contact-social-heading">Let’s get connected</h3>
-        <h2>Let’s work together.</h2>
+        {/* <h3 className="contact-social-heading">Let’s get connected</h3> */}
+        <h2>Let’s get connected</h2>
       </div>
       <p className="section-intro">
         Have a question or want to work together? Send me an email.

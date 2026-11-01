@@ -32,7 +32,6 @@ const projects = [
 function ProjectsPage() {
   return (
     <section className="page-section content-section" id="projects">
-      <p className="eyebrow">SELECTED WORK</p>
       <h2>Projects</h2>
       <p className="section-intro">A few things I’ve worked on.</p>
 

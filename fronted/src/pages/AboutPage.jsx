@@ -1,7 +1,6 @@
 function AboutPage() {
   return (
     <section className="page-section content-section" id="about">
-      <p className="eyebrow">A LITTLE ABOUT ME</p>
       <h2>About me</h2>
       <p className="section-intro">
         I’m a computer science and AI student who enjoys exploring how software
