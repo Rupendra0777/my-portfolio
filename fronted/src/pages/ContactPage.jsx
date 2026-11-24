@@ -12,8 +12,17 @@ function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
-      const response = await fetch(`${apiUrl}/contact`, {
+      const apiUrl =
+        import.meta.env.VITE_API_URL ||
+        (import.meta.env.DEV ? "http://localhost:8000" : "");
+
+      if (!apiUrl) {
+        throw new Error(
+          "The contact form is not configured yet. Please email me directly."
+        );
+      }
+
+      const response = await fetch(`${apiUrl.replace(/\/+$/, "")}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -30,11 +39,12 @@ function ContactPage() {
       });
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      // 3. Trigger error toast
       const errorMessage =
         error instanceof TypeError
-          ? "Could not reach the server. Check that the backend is running and try again."
-          : error.message;
+          ? "Could not reach the contact service. Please email me directly or try again later."
+          : error instanceof Error
+            ? error.message
+            : "Could not send your message. Please try again.";
 
       toast.error(errorMessage);
     } finally {

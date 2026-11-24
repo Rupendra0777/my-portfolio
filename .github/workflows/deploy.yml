@@ -36,6 +36,8 @@ jobs:
 
       - run: npm run build
         working-directory: fronted
+        env:
+          VITE_API_URL: ${{ vars.VITE_API_URL }}
 
       # Lets React Router routes load when opened directly or refreshed.
       - run: cp fronted/dist/index.html fronted/dist/404.html

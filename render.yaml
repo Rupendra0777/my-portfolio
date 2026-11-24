@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rupendra-portfolio-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: MONGO_URL
+        sync: false
+      - key: FRONTEND_URLS
+        value: https://www.rupendradhungana.com.np,https://rupendradhungana.com.np,http://localhost:5173,http://127.0.0.1:5173
