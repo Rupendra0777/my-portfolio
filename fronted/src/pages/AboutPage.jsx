@@ -8,12 +8,14 @@ function AboutPage() {
         with new tools, and improving my code along the way.
       </p>
       <h3>What I’m interested in</h3>
-      <p className="section-copy">
-        My interests include Python, machine learning, deep learning, computer
-        vision, and full-stack web development. I’ve been exploring tools and
-        technologies such as NumPy, pandas, scikit-learn, Django, FastAPI,
-        JavaScript, React, Node.js, Express, and MongoDB.
-      </p>
+      <div className="skill-list" aria-label="Skills">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>Computer Vision</span>
+        <span>React</span>
+        <span>FastAPI</span>
+        <span>Node.js</span>
+      </div>
     </section>
   );
 }

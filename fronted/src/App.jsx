@@ -11,6 +11,7 @@ function App() {
       <header className="site-header">
         <a className="site-brand" href="#home">
           <img src={profileLogo} alt="" width="30" height="30" />
+          <span>Rupendra</span>
         </a>
         <AppNavLink />
       </header>

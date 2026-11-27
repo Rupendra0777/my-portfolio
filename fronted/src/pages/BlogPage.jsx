@@ -26,20 +26,30 @@ const sources = [
 function BlogPage() {
   return (
     <section className="page-section content-section" id="writing">
-
       <h2>Writing</h2>
       <details className="writing-details">
-        <summary>Everyone’s Googling PHP Right Now, Including Me. Here’s Why</summary>
+        <summary className="writing-card">
+          <div className="writing-cover">
+            <img src={phpImage} alt="PHP code displayed on a computer screen" />
+          </div>
+          <div className="writing-card-copy">
+            <p className="writing-meta">Technology · 6 min read</p>
+            <h3>Everyone’s Googling PHP Right Now, Including Me. Here’s Why</h3>
+            <p className="writing-excerpt">
+              What PHP is, why critical vulnerabilities made headlines, and what
+              beginners should take away from the news.
+            </p>
+            <span className="writing-action">
+              Read article <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        </summary>
         <article className="blog-article">
           <p className="blog-lead">
             If you’ve seen “PHP” all over your feed this week, you’re not imagining it.
             I noticed it too, and I’m new to programming, so my first thought was: what
             is PHP, and why is everyone suddenly talking about it?
           </p>
-          <figure className="blog-cover">
-            <img src={phpImage} alt="PHP displayed on a smartphone screen" />
-            <figcaption>PHP runs behind the scenes of many websites.</figcaption>
-          </figure>
           <p>
             So I did what any beginner does: I Googled it. Here’s everything I
             learned, explained the way I wish someone had explained it to me.
